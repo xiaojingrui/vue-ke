@@ -1,0 +1,31 @@
+$num: 40;
+$primaryColor: #538ce9;
+$red: #df0a1b;
+$baseImgUrl: '../assets';
+$baseCompImgUrl: '../../assets';
+
+@mixin setFlexPos($xPos, $yPos) {
+  display: -webkit-flex;
+  display: flex;
+  justify-content: $xPos;
+  -webkit-justify-content: $xPos;
+  align-items: $yPos;
+  -webkit-align-items: $yPos;
+}
+
+@mixin setHeight($height) {
+  height: $height;
+  line-height: $height;
+}
+
+@mixin setSize($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin setTextCenter($width, $height) {
+  width: $width;
+  height: $height;
+  line-height: $height;
+  text-align: center;
+}

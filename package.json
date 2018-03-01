@@ -1,0 +1,17 @@
+{
+  "name": "customer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "web:dev": "cd web && npm run dev",
+    "server": "pm2 kill && cd server && npm run start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "xxx"
+  },
+  "keywords": ["customer"],
+  "author": "",
+  "license": "ISC"
+}

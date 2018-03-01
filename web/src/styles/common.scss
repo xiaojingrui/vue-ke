@@ -1,0 +1,100 @@
+@import './reset.scss';
+@import '../components/scssCalc.scss';
+
+body,
+html {
+  background: rgba(240, 244, 247, 1);
+  overflow: hidden;
+  height: 100%;
+}
+
+.common-query {
+  width: 100%;
+  height: 75px;
+  padding-left: 29px;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(229, 229, 229, 1);
+
+  li {
+    width: 130px;
+    margin-right: 20px;
+    @include setHeight(50px);
+    background: #fff;
+    border-radius: 25px;
+    text-align: center;
+    font-size: 24px;
+    color: rgba(91, 98, 114, 1);
+  }
+}
+.my-footer {
+  position: relative;
+  padding-left: 26px;
+  height: 80px;
+  box-sizing: border-box;
+  background-color: #fff;
+
+  .keyboard-icon {
+    display: inline-block;
+    @include setSize(40px,40px);
+    background: url(#{$baseImgUrl}/key.svg) no-repeat 0 0;
+    background-size: cover;
+  }
+
+  .send-icon {
+    display: inline-block;
+    @include setSize(80px,80px);
+    background: url(#{$baseImgUrl}/send.svg) no-repeat center center;
+    background-size: 30px 30px;
+    transition: transform 0.5s;
+
+    &.active {
+      transform: rotate(-45deg);
+      background-image: url(#{$baseImgUrl}/send-after.svg);
+    }
+  }
+
+  input,
+  .input {
+    display: block;
+    height: 37px;
+    line-height: 37px;
+    font-size: 26px;
+    width: calc(100% - 40px - 80px - 20px);
+    margin: 0 10px;
+  }
+  ::-webkit-input-placeholder,
+  .input {
+    color: #d5d5d5;
+  }
+}
+
+.common-msg-style {
+  margin-left: 26px;
+  margin-top: 33px;
+  border-radius: 28px 4px 28px 4px;
+  background-color: #fff;
+
+  &.fixed-width {
+    width: 560px;
+  }
+
+  &.max-width {
+    max-width: 560px;
+  }
+}
+
+.flex-start-center {
+  @include setFlexPos(flex-start, center);
+}
+
+.flex-end-center {
+  @include setFlexPos(flex-end, center);
+}
+
+.space-between-center {
+  @include setFlexPos(space-between, center);
+}
+
+.center-center {
+  @include setFlexPos(center, center);
+}

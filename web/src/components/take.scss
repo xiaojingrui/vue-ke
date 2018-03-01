@@ -1,0 +1,101 @@
+@import './scssCalc.scss';
+.take {
+  position: relative;
+  height: 100%;
+  box-sizing: border-box;
+
+  .take-header {
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+    background: url(#{$baseImgUrl}/logo-radius.png) no-repeat center center;
+    background-size: 130px 130px;
+    background-color: #fff;
+    .left-arrow {
+      width: 90px;
+      height: 40px;
+      display: inline-block;
+      color: #528be8;
+      margin-top: 30px;
+      margin-left: 50px;
+      font-size: 30px;
+      &:before {
+        content: '';
+        display: inline-block;
+        width: 25rem/$num;
+        height: 25rem/$num;
+        border: 1px solid #528be8;
+        border-width: 1px 0 0 1px;
+        transform: rotate(315deg);
+      }
+    }
+  }
+  .content {
+    &.transfer-human {
+      height: calc(100% - 80px - 80px);
+    }
+
+    position: relative;
+    padding-top: 150px;
+    height: calc(100% - 80px - 80px - 75px);
+    padding-bottom: 60px;
+    box-sizing: border-box;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    .forbid {
+      color: #ccc !important;
+    }
+    .common-customer {
+      margin-left: 30px;
+    }
+    .common-customer-service {
+      margin-right: 30px;
+    }
+  }
+  .content-container {
+    height: 100%;
+  }
+  .footer-functions {
+    height: 80px;
+
+    li {
+      margin-left: 30px;
+    }
+
+    .heart-icon {
+      display: block;
+      width: 60px;
+      height: 100%;
+      background: url(#{$baseImgUrl}/heart.svg) no-repeat center center;
+      background-size: 40px 36px;
+    }
+    .img-uploader-icon {
+      position: relative;
+      display: block;
+      width: 55px;
+      height: 100%;
+      background: url(#{$baseImgUrl}/img-uploader.svg) no-repeat center center;
+      background-size: 38px 30px;
+
+      form,
+      .img-uploader {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .img-uploader {
+        opacity: 0;
+        z-index: 10;
+      }
+    }
+  }
+}
